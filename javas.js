@@ -19,11 +19,7 @@ for (let i = 0; i < array.length; i++){
         }
 }*/
 
-//esercizio n.3
 
-
-
-//esercizio n.3
 
 /*let somma = 0;
 for ( let i = 0; i <= 200; i++){
