@@ -25,16 +25,28 @@ let listaProdotti = [
 ]
 
 
-let listaNome = listaProdotti.map(function (listaProdotti){
-    return listaProdotti.nome
+let listaNome = listaProdotti.sort(function(a,b){
+    if (a.nome < b.nome)
+    return -1;
+if (a.nome > b.nome) 
+return 1;
+return 0;
+    
 })
 
 
-let listaPrezzo = listaProdotti.map(function (listaProdotti){
-    return listaProdotti.prezzo
+let listaPrezzo = listaProdotti.sort(function(a,b){
+    if (a.prezzo < b.prezzo)
+    return -1;
+if (a.prezzo > b.prezzo) 
+return 1;
+return 0;
+    
 })
 
-// console.log(listaNome);
+console.log(listaPrezzo);
+
+
 
 
 function listaFiltrata (listaProdotti){
@@ -67,5 +79,26 @@ let listaPrezzoMaggiore250_2 = listaProdotti.filter((listaPrezzo) => listaPrezzo
 // console.log(listaPrezzoMaggiore250_2);
 
 
-// eswercizio n.2
+// esercizio n.2
+
+let url ="https://sitodiecommerce.com/paginaDelProdotto?idProdotto=12312312312&userId=314123&time=8999";
+
+let urlsplittata = url.split("?")
+
+let parametri = urlsplittata[1].split("&")
+
+// console.log(parametri);
+
+
+parametri.forEach(function (parametro) {
+
+    let parametroSplittato = parametro.split("=")
+    // console.log(parametroSplittato[1]);
+    
+})
+
+
+
+
+
 
