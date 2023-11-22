@@ -34,6 +34,7 @@ return 0;
     
 })
 
+// console.log(listaNome);
 
 let listaPrezzo = listaProdotti.sort(function(a,b){
     if (a.prezzo < b.prezzo)
@@ -44,9 +45,7 @@ return 0;
     
 })
 
-console.log(listaPrezzo);
-
-
+// console.log(listaPrezzo);
 
 
 function listaFiltrata (listaProdotti){
@@ -72,11 +71,13 @@ let listaPrezzoMaggiore250 = listaFiltrata(listaProdotti);
 // console.log(listaPrezzoMaggiore250);
 
 
-
-
 let listaPrezzoMaggiore250_2 = listaProdotti.filter((listaPrezzo) => listaPrezzo.prezzo > 250)
 
 // console.log(listaPrezzoMaggiore250_2);
+
+
+
+
 
 
 // esercizio n.2
@@ -99,6 +100,29 @@ parametri.forEach(function (parametro) {
 
 
 
+
+// esercizio n.3
+
+
+let frasePalindroma = "i topi non avevano nipoti";
+
+// let fraseUnita = frasePalindroma.replace(/\W/g,"").toLowerCase();
+// console.log(frasePalindroma);
+
+// let fraseAlContrario = fraseUnita.split("").reverse().join();
+// console.log(fraseAlContrario);
+
+function palindroma (string){
+    let fraseUnita = string.replace(/\W/g,"").toLowerCase();
+    let fraseAlContrario = fraseUnita.split("").reverse().join("");
+    let controlloFrase = fraseAlContrario === fraseUnita;
+
+    return controlloFrase;
+
+}
+
+
+console.log(palindroma(frasePalindroma));
 
 
 
